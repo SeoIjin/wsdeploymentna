@@ -1,0 +1,48 @@
+/* Shared back button styles — used by multiple pages to ensure consistent design */
+
+header {
+  position: relative;
+}
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, transform 0.12s ease;
+  margin-right: 12px;
+}
+
+.back-btn:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.back-btn:active {
+  transform: translateY(0);
+}
+
+.back-btn i {
+  color: #374151;
+  font-size: 16px;
+}
+
+/* Ensure header-left groups align consistently when using the shared button */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0; /* use margin on button for spacing */
+}
+
+/* Small-screen tweak */
+@media (max-width: 480px) {
+  .back-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
